@@ -1,3 +1,4 @@
+package project;
 
 import java.awt.*;
 
@@ -212,12 +213,26 @@ public class Scene {
 				Counter.HungerUp();	
 			}	
 	}
-
 	public static void Extracurricular() {
 
 	}
 
 	public static void Buttery() {
+		System.out.println("Is it a buttery kind of night?(1/0)");
+		Scanner console = new Scanner(System.in);
+		int ButteryAns = console.nextInt();
+			if(ButteryAns == 1){
+				System.out.println("You go to the buttery for a late night snack and you have a ball playing billiards with your best buds");
+				Counter.WellbeingUp();
+				Counter.HungerDown();
+			}
+			else {
+				System.out.println("You end up just meandering around accumulating stress about your looming deadlines");
+				Counter.WellbeingDown();
+				System.out.println("You got this!");
+			}
+				
+		
 
 	}
 
