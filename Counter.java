@@ -45,5 +45,31 @@ public static void Wellbeing2Up(){
 	 wellbeing = -4;
 	 System.exit(0);
  }
- 
+ public static void showWellbeing(){
+	System.out.println("Congratulations! You have an awesome " + wellbeing + " points to show off to your friends!");
+}
+ public static int getHunger(){
+	return hunger;
+}
+public static int getWellbeing(){
+	return wellbeing;
+}
+
+public static void theHungerEffect(){
+	if (hunger == 3){
+		wellbeing -= 6;
+	}
+	else if (hunger == 2){
+		wellbeing -= 4;
+	}
+	else if (hunger == 1){
+		wellbeing -= 2;
+	}
+}
+public static void terminationClause(){
+	if (wellbeing < -2){
+		System.out.println("GAME OVER, your wellbeing reached negative 3.");
+		System.exit(0);
+	}
+}
 }
