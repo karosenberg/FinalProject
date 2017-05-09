@@ -45,6 +45,7 @@ public static void Wellbeing2Up(){
 }
  public static void Excom(){
 	 wellbeing = -4;
+	 StdAudio.play("deathsong_harvard.wav");
 	 System.exit(0);
  }
  public static void showWellbeing(){
@@ -72,6 +73,7 @@ public static void theHungerEffect(){
 public static void terminationClause(){
 	if (wellbeing < -2){
 		System.out.println("GAME OVER, your wellbeing reached negative 3.");
+		StdAudio.play("deathsong_harvard.wav");
 		System.exit(0);
 	}
 }
