@@ -38,7 +38,6 @@ public class PlayGame {
 			else{		
 				Scene.Procrastinate();
 				Scene.Dinner();
-			}
-			console.close();	
+			}	
 	}
 }
