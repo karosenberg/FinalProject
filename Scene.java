@@ -399,6 +399,8 @@ public class Scene {
 	public static void wellbeingDeath(){
 		if (Counter.getWellbeing() <= -3){
 		System.out.println("Oh no! The weight of all your hopes, dreams, and responsibilities comes\n crashing down on you! You curl up into the fetal position and begin bawling your eyes out.");	
+		StdAudio.play("bulldog.wav");
+		System.exit(0);
 		}
 	}
 }
