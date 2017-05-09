@@ -233,6 +233,8 @@ public class Scene {
 				System.out.println("Why?");
 				System.out.println("You spend all day at the office, crawling through first, second, and fifteenth drafts of\n whatever your writers put in front of you before scrapping everything and picking whatever will get you on Overheard.\n You fall asleep atop your coffee at 3am, regretting your life choices.");
 				goodNight();
+				System.exit(0);
+
 			}
 			else if (dailyNews == 2){
 			System.out.println("Very well, unimportant person, then what do you do in your free time? A capella(1) Dwight Hall(2) IntraMurals(3)");
