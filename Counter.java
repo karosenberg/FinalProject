@@ -49,7 +49,7 @@ public static void Wellbeing2Up(){
  }
  public static void showWellbeing(){
 	System.out.println("Congratulations! You have an awesome " + wellbeing + " points to show off to your friends!");
-	 StdAudio.play("deathsong_harvard.wav");
+	 StdAudio.play("bulldog.wav");
 }
  public static int getHunger(){
 	return hunger;
