@@ -356,14 +356,14 @@ public class Scene {
 
 
 	public static void Nighttime() {
-		System.out.println("The night air is chilly yet alive with the warmth of bustling bodies and alcohol.\n But you know you shouldn't go out tonight. Your unfinished pset fills you with guilt. \nDo you go to office hours(1) or bite the bullet and go to WOADS(2)?");
+		System.out.println("The night air is chilly yet alive with the warmth of bustling bodies and alcohol.\nBut you know you shouldn't go out tonight. Your unfinished pset fills you with guilt. \nDo you go to office hours(1) or bite the bullet and go to WOADS(2)?");
 		Scanner console = new Scanner(System.in);
 		int ProcrastinateAns = console.nextInt();
 			if (ProcrastinateAns == 1){
-				System.out.println("You drag yourself through the cold to a tiny room full of panicking students and jovial TAs.\n Of course, there are a few students who are completely chill because they finished the pset the hour it was posted, \nthey only came here to laugh at plebs like you.\nOne of them points out that pizza was promised at office hours. \nYou could second his request for nourishment(1) or focus on your pset(2). Note that the pizza will be Papa Johns.");
+				System.out.println("You drag yourself through the cold to a tiny room full of panicking students and jovial TAs.\nOf course, there are a few students who are completely chill because they finished the pset the hour it was posted, \nthey only came here to laugh at plebs like you.\nOne of them points out that pizza was promised at office hours. \nYou could second his request for nourishment(1) or focus on your pset(2). Note that the pizza will be Papa Johns.");
 				int pizzaChoice = console.nextInt();
 				if (pizzaChoice == 1){
-					System.out.println("You wail frantically for pizza, praying to Steve Jobs' ghost for a large Papa Johns.\n You receive it, and take a big gooey bite while your peers gorge themselves on the garlic sauce.\n However, the promise of the great John distracted you from work.\n");
+					System.out.println("You wail frantically for pizza, praying to Steve Jobs' ghost for a large Papa Johns.\nYou receive it, and take a big gooey bite while your peers gorge themselves on the garlic sauce.\n However, the promise of the great John distracted you from work.\n");
 							   Counter.HungerDown();
 							   Counter.WellbeingDown();
 				}
@@ -389,7 +389,7 @@ public class Scene {
 		System.out.println();
 		System.out.println("You walk back, dazed and confused, to your room. You collapse on your bed,\nhaving made it through a completely ordinary day. Good Night!");
 		if (Counter.getHunger() > 0){
-			System.out.println("You wake up as your tummy rumbles, cursing you for not filling it \nduring the day. Thus, you have lost the most important battle and will have a terrible night.");
+			System.out.println("You wake up as your tummy rumbles, cursing you for not filling it during the day. \nThus, you have lost the most important battle and will have a terrible night.");
 			Counter.theHungerEffect();
 			Counter.terminationClause();
 		}
