@@ -396,14 +396,30 @@ public class Scene {
 			Counter.terminationClause();
 		}
 		wellbeingDeath();
-		Counter.showWellbeing();	
+		Counter.showWellbeing();
+		System.out.println("Do you want to play again? 1/0");
+		Scanner console = new Scanner(System.in);
+		int playAgain = console.nextInt();
+			if (playAgain == 1){
+				PlayGame.main(null);
+			}
+			else{
+				System.exit(0);
+			}
 	}
 							   
 	public static void wellbeingDeath(){
 		if (Counter.getWellbeing() <= -3){
 		System.out.println("Oh no! The weight of all your hopes, dreams, and responsibilities comes\n crashing down on you! You curl up into the fetal position and begin bawling your eyes out.");	
 		StdAudio.play("deathsong_harvard.wav");
-		System.exit(0);
-		}
+		System.out.println("Do you want to play again? 1/0");
+		Scanner console = new Scanner(System.in);
+		int playAgain = console.nextInt();
+			if (playAgain == 1){
+				PlayGame.main(null);
+			}
+			else{
+				System.exit(0);
+			}
 	}
 }
