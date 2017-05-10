@@ -25,6 +25,7 @@ public class Scene {
 			Counter.HungerDown();
 		} else {
 			System.out.println("That was an invalid input");
+			Morning();
 		}
 		
 	}
@@ -96,9 +97,13 @@ public class Scene {
 			if (ResColAnswer == 1) {
 				Counter.HungerDown();
 				Counter.WellbeingDown();
-			} else {
+			} else if (ResColAnswer == 2) {
 				System.out.println("Not eating is a pretty bold move");
 			}
+			else {
+			System.out.println("That was an invalid input");
+			Lunch();
+		}
 		}
 	}
 
@@ -125,6 +130,10 @@ public class Scene {
 			System.out.println(
 					"You go out onto the warm expanse of Cross Campus with the intent to study... \nBut it begins to rain, and you lose all drive to study.");
 			Counter.WellbeingDown();
+		}
+		else {
+			System.out.println("That was an invalid input");
+			Study();
 		}
 
 	}
@@ -196,9 +205,13 @@ public class Scene {
 			Counter.WellbeingDown();
 			Counter.HungerDown();
 		}
-		else{
+		else if (DinnerSecond == 1){
 			System.out.println("Going to dinner so early is a bold move. You see your best friends there but you know you will be hungry later, \nso you leave happy but your stomach is dissatisfied");
 			Counter.WellbeingUp();	
+		}
+		else {
+			System.out.println("That was an invalid input");
+			Dinner();
 		}
 	}
 
@@ -217,10 +230,14 @@ public class Scene {
 				Counter.WellbeingUp();
 				StdDraw.picture(50.0, 50.0, "meme.jpg");
 			}
-			else {
+			else if (ProcrastinateAns == 3){
 				System.out.println("You take a run and feel that nice runners afterglow and feel confident about your health, \nbut it makes you even more hungry than you usually are");
 				Counter.Wellbeing2Up();
 				Counter.HungerUp();	
+			}
+			else {
+				System.out.println("That was an invalid input");
+				Procrastinate();
 			}
 	}
 	
@@ -259,15 +276,15 @@ public class Scene {
 		}
 		public static void aCapella(){
 
-				int throat = (int) Math.round((Math.random()));
-				System.out.println("You join your bestest buddies and sing your heart out during rehearsals!");
-					if (throat == 0){
-						System.out.print("You hit the perfect notes and walk away fine!");
-					}
-					else{
-						System.out.print("You see a cat outside the window and scream in your singing voice.\n Now you have a sore throat!");
-						Counter.WellbeingDown();
-					}
+			int throat = (int) Math.round((Math.random()));
+			System.out.println("You join your bestest buddies and sing your heart out during rehearsals!");
+				if (throat == 0){
+					System.out.print("You hit the perfect notes and walk away fine!");
+				}
+				else{
+					System.out.print("You see a cat outside the window and scream in your singing voice.\n Now you have a sore throat!");
+					Counter.WellbeingDown();
+				}
 		}
 		public static void dwight(){
 			System.out.println("As a member of one of the many honorable societies under Dwight Hall, \nyou are helping make the world a better place.");
