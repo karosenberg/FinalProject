@@ -50,6 +50,8 @@ public static void Wellbeing2Up(){
 				Scanner console = new Scanner(System.in);
 				int playAgain = console.nextInt();
 				if (playAgain == 1) {
+					wellbeing = 0;
+					hunger = 3;
 					PlayGame.main(null);
 				} else {
 					System.exit(0);
@@ -87,6 +89,8 @@ public static void theHungerEffect(){
 				Scanner console = new Scanner(System.in);
 				int playAgain = console.nextInt();
 				if (playAgain == 1) {
+					wellbeing = 0;
+					hunger = 3;
 					PlayGame.main(null);
 				} else {
 					System.exit(0);
