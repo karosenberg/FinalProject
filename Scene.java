@@ -215,7 +215,7 @@ public class Scene {
 			else if (ProcrastinateAns == 2){
 				System.out.println("You troll around for a couple hours and you finally stumble upon the meme of a lifetime");
 				Counter.WellbeingUp();
-				// cue Std.Draw Dope ass meme??????
+				StdDraw.picture(50.0, 50.0, "meme.jpg");
 			}
 			else {
 				System.out.println("You take a run and feel that nice runners afterglow and feel confident about your health, \nbut it makes you even more hungry than you usually are");
