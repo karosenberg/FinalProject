@@ -46,7 +46,15 @@ public static void Wellbeing2Up(){
  public static void Excom(){
 	 wellbeing = -4;
 	 StdAudio.play("deathsong_harvard.wav");
-	 System.exit(0);
+	 System.out.println("Do you want to play again? 1/0");
+				Scanner console = new Scanner(System.in);
+				int playAgain = console.nextInt();
+				if (playAgain == 1) {
+					PlayGame.main(null);
+				} else {
+					System.exit(0);
+				}
+				console.close();
  }
  public static void showWellbeing(){
 	System.out.println("Congratulations! You have an awesome " + wellbeing + " points to show off to your friends!");
@@ -70,11 +78,21 @@ public static void theHungerEffect(){
 		wellbeing -= 2;
 	}
 }
-public static void terminationClause(){
-	if (wellbeing < -2){
-		System.out.println("GAME OVER, your wellbeing reached negative 3.");
-		StdAudio.play("deathsong_harvard.wav");
-		System.exit(0);
+	public static void terminationClause() {
+		if (wellbeing < -2) {
+			System.out.println("GAME OVER, your wellbeing reached negative 3.");
+			if (Counter.getWellbeing() <= -3) {
+				StdAudio.play("deathsong_harvard.wav");
+				System.out.println("Do you want to play again? 1/0");
+				Scanner console = new Scanner(System.in);
+				int playAgain = console.nextInt();
+				if (playAgain == 1) {
+					PlayGame.main(null);
+				} else {
+					System.exit(0);
+				}
+				console.close();
+			}
+		}
 	}
-}
 }
